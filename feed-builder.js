@@ -7,7 +7,7 @@ const text = require('./text');
 const FeedBuilder = function () {
 	this.title = null;
 	this.link = null;
-	this.desc = null;
+	this.description = null;
 	this.data = null;
 
 	this.keys = {
@@ -41,7 +41,7 @@ FeedBuilder.prototype.buildRSS = function (callback) {
 	const root = {rss: [{_attr: {version: '2.0'}}]};
 	root.rss.push({title: this.title});
 	root.rss.push({link: this.link});
-	root.rss.push({description: this.desc});
+	root.rss.push({description: this.description});
 
 	const self = this;
 
