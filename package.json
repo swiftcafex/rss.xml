@@ -5,9 +5,9 @@
   "homepage": "https://github.com/swiftcafex/rss.xml",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "xo && ava"
   },
-  "keywords": [    
+  "keywords": [
     "rss",
     "feed",
     "json",
@@ -24,7 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "ava": "^0.22.0",
-    "should": "^13.1.0"
+    "import-fresh": "^2.0.0"
   },
   "dependencies": {
     "xml": "^1.0.1"
