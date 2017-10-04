@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/swiftcafex/rss.xml.svg?branch=master)](https://travis-ci.org/swiftcafex/rss.xml)
+[![Build Status](https://travis-ci.org/swiftcafex/rss.xml.svg?branch=master)](https://travis-ci.org/swiftcafex/rss.xml) [![Coverage Status](https://coveralls.io/repos/github/swiftcafex/rss.xml/badge.svg?branch=master)](https://coveralls.io/github/swiftcafex/rss.xml?branch=master)

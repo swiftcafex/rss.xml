@@ -1,3 +1,5 @@
+'use strict';
+
 const xml = require('xml');
 const dateFormat = require('dateformat');
 const text = require('./text');

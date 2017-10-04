@@ -1,3 +1,4 @@
+'use strict';
 import test from 'ava';
 
 const xmljs = require('xml-js');
