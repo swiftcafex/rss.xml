@@ -5,7 +5,7 @@
   "homepage": "https://github.com/swiftcafex/rss.xml",
   "main": "index.js",
   "scripts": {
-    "test": "xo && ava",
+    "test": "xo && nyc ava",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
