@@ -1,5 +1,3 @@
-const xml = require('xml');
+const rss = require('./feed-builder');
 
-const output = xml({a: 1});
-
-console.log(output);
+module.exports = rss;

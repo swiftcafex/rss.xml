@@ -14,6 +14,10 @@
     "json",
     "atom"
   ],
+  "files": [
+    "index.js",
+    "feed-builder.js"
+  ],  
   "author": "Xiangping Meng (https://github.com/swiftcafex)",
   "repository": {
     "type": "git",
