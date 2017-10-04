@@ -12,11 +12,24 @@ const FeedBuilder = function () {
 	// Elements according RSS 2.0 Specification
 	// http://cyber.harvard.edu/rss/rss.html
 
+	// Data collection to genrerate rss.
+	this.data = null;
+
+	// Keys to bind collection
+	this.keys = {
+
+		title: null,
+		link: null,
+		description: null,
+		guid: null,
+		pubDate: null
+
+	};
+
 	// Necessary elements
 	this.title = null;
 	this.link = null;
 	this.description = null;
-	this.data = null;
 
 	// Optional elements with default value.
 	this.pubDate = null;		// Default: current date
@@ -35,16 +48,6 @@ const FeedBuilder = function () {
 	this.image = null;
 	this.rating = null;
 	this.textInput = null;		// The purpose of the <textInput> element is something of a mystery. You can use it to specify a search engine box. Or to allow a reader to provide feedback. Most aggregators ignore it.
-
-	this.keys = {
-
-		title: null,
-		link: null,
-		description: null,
-		guid: null,
-		pubDate: null
-
-	};
 };
 
 // Generate rss xml string
@@ -163,7 +166,15 @@ FeedBuilder.prototype.buildRSS = function (callback) {
 				xmlItem.push({description: item[self.keys.description]});
 			}
 
-			root.rss.push({item: xmlItem});
+			if (self.keys.pubDate) {
+				xmlItem.push({pubDate: item[self.keys.pubDate]});
+			}
+
+			if (self.keys.guid) {
+				xmlItem.push({guid: item[self.keys.guid]});
+			}
+
+			channel.push({item: xmlItem});
 		});
 	}
 
