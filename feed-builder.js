@@ -178,7 +178,7 @@ FeedBuilder.prototype.buildRSS = function (callback) {
 		});
 	}
 
-	const xmlOutput = xml(root, true);
+	const xmlOutput = xml(root, {declaration: true, indent: true});
 	callback(null, xmlOutput);
 };
 

@@ -21,6 +21,10 @@ test('channel default values should be set', t => {
 		const json = JSON.parse(jsonString);
 		const channel = json.rss.channel;
 
+		// Check XML Declaration
+		t.is(json._declaration._attributes.version, '1.0');
+		t.is(json._declaration._attributes.encoding, 'UTF-8');
+
 		// Necessary elements should same as they set in code above.
 		t.is(channel.title._text, 'SwiftCafe');
 		t.is(channel.link._text, 'https://swiftcafe.io');
