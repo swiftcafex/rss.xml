@@ -5,7 +5,8 @@
   "homepage": "https://github.com/swiftcafex/rss.xml",
   "main": "index.js",
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo && ava",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
     "rss",
@@ -24,10 +25,14 @@
   "license": "MIT",
   "devDependencies": {
     "ava": "^0.22.0",
+    "coveralls": "^3.0.0",
     "import-fresh": "^2.0.0",
+    "nyc": "^11.2.1",
+    "xml-js": "^1.5.1",
     "xo": "*"
   },
   "dependencies": {
+    "dateformat": "^3.0.2",
     "xml": "^1.0.1"
   }
 }
