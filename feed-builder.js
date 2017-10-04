@@ -24,17 +24,17 @@ const FeedBuilder = function () {
 // Generate rss xml string
 FeedBuilder.prototype.buildRSS = function (callback) {
 	if (!this.title) {
-		callback(new Error(text['error.channel.title'], null));
+		callback(new Error(text['error.channel.title']), null);
 		return;
 	}
 
 	if (!this.link) {
-		callback(new Error(text['error.channel.link'], null));
+		callback(new Error(text['error.channel.link']), null);
 		return;
 	}
 
 	if (!this.desc) {
-		callback(new Error(text['error.channel.description'], null));
+		callback(new Error(text['error.channel.description']), null);
 		return;
 	}
 
